@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  ecommerce-product:
+    container_name: "ecommerce-product"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    env_file:
+      - ./src/main/resources/application.properties
+    ports:
+      - "8080:8080"
