@@ -2,14 +2,15 @@ version: "3.8"
 services:
   ecommerce-product:
     container_name: "ecommerce-product"
+    image: pratamafarhan10/spring-boot-ocp:latest
     build:
       context: ./
       dockerfile: Dockerfile
-#    env_file:
-#      - ./src/main/resources/application.properties
-    environment:
-      - MYSQL_USER=product
-      - MYSQL_PASS=product
-      - MYSQL_URL=localhost
+    env_file:
+      - ./src/main/resources/application.properties
+#    environment:
+#      - MYSQL_USER=product
+#      - MYSQL_PASS=product
+#      - MYSQL_URL=localhost
     ports:
       - "8080:8080"
