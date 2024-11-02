@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: product-service
+  namespace: pratamafarhan10-dev
   labels:
     app: product-service
 spec:
@@ -18,3 +19,6 @@ spec:
       containers:
         - name: product-service
           image: pratamafarhan10/spring-boot-ocp
+          envFrom:
+            - configMapRef:
+                name: product-service-config

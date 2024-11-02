@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: product-service
   labels:
-    product-service
+    app: product-service
 spec:
   selector:
     app: product-service
